@@ -2620,11 +2620,13 @@ ul {
     border-radius: 8px;
     -o-object-fit: cover;
     object-fit: cover;
-    animation-play-state: paused;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .image-3:hover {
-    animation-play-state: running;
+    -webkit-transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .circle-big {
