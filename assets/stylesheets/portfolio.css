@@ -1979,7 +1979,7 @@ textarea.w-select {
     top: 100%;
     left: 0;
     right: 0;
-    background: #c8c8c8;
+    background: #dfdfdf;
     text-align: center;
     overflow: visible;
     min-width: 200px
@@ -2619,7 +2619,12 @@ ul {
     width: 100%;
     border-radius: 8px;
     -o-object-fit: cover;
-    object-fit: cover
+    object-fit: cover;
+    animation-play-state: paused;
+}
+
+.image-3:hover {
+    animation-play-state: running;
 }
 
 .circle-big {
@@ -2633,7 +2638,19 @@ ul {
     height: 800px;
     border-radius: 100%;
     background-image: linear-gradient(198deg, rgba(117, 255, 192, 0) 50%, #75ffc0);
-    opacity: .74
+    opacity: .74;
+    -webkit-animation: circle-big 3s infinite  alternate;
+    animation: circle-big 3s infinite  alternate;
+}
+
+
+@-webkit-keyframes circle-big {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+@keyframes circle-big {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
 }
 
 .portfolio-item {
